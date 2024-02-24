@@ -1,6 +1,7 @@
 {
   "name": "react-native-reusable-ui",
   "version": "0.1.0",
+  "private":false,
   "description": "reusable ui",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
