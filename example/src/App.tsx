@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, Alert } from 'react-native';
-import { CustomButtonX } from 'react-native-reusable-ui';
+import { CustomButtonX, SkeletonLoaderX } from 'react-native-reusable-ui';
 
 export default function App() {
   return (
@@ -12,6 +12,9 @@ export default function App() {
         icon={<Text style={{ marginRight: 8 }}>🔥</Text>} // Optional Icon
         size="small"
       />
+
+      <SkeletonLoaderX width="100%" height={200} borderRadius={10} animationStyle='wave' />
+
     </View>
   );
 }
