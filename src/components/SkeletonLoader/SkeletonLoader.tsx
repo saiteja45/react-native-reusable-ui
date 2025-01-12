@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Animated, Easing } from 'react-native';
+import { StyleSheet, Animated, Easing } from 'react-native';
 
 type SkeletonLoaderProps = {
   width?: number | string; // Width of the skeleton block
@@ -58,10 +58,10 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
     animateSkeleton();
   }, [animationValue, animationStyle]);
 
-  const animatedBackgroundColor = animationValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['#e0e0e0', '#f0f0f0'],
-  });
+  //   const animatedBackgroundColor = animationValue.interpolate({
+  //     inputRange: [0, 1],
+  //     outputRange: ['#e0e0e0', '#f0f0f0'],
+  //   });
 
   // Shimmering effect for skeleton loader
   const shimmerTranslateX = animationValue.interpolate({

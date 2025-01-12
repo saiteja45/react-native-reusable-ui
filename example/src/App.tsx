@@ -13,8 +13,12 @@ export default function App() {
         size="small"
       />
 
-      <SkeletonLoaderX width="100%" height={200} borderRadius={10} animationStyle='wave' />
-
+      <SkeletonLoaderX
+        width="100%"
+        height={200}
+        borderRadius={10}
+        animationStyle="wave"
+      />
     </View>
   );
 }
