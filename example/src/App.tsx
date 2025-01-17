@@ -1,9 +1,30 @@
-import { Text, View, StyleSheet, Alert } from 'react-native';
-import { CustomButtonX, SkeletonLoaderX } from 'react-native-reusable-ui';
+import { Text, View, StyleSheet, Alert, ScrollView } from 'react-native';
+import { CustomButtonX, SkeletonLoaderX, AutocompleteTextInputX } from 'react-native-reusable-ui';
 
 export default function App() {
+  const suggestions = [
+    'React Native',
+    'React',
+    'Redux',
+    'TypeScript',
+    'JavaScript',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'SQL',
+    'GraphQL',
+  ];
+  const handleSelect = (value: string) => {
+    console.log('Selected:', value);
+  };
   return (
-    <View style={styles.container}>
+
+    <ScrollView style={styles.container}
+    contentContainerStyle={{
+      alignContent:"center",
+      justifyContent:"center"
+    }}
+    >
       <CustomButtonX
         title="Click Me"
         onPress={() => Alert.alert('Button Pressed!')}
@@ -19,14 +40,26 @@ export default function App() {
         borderRadius={10}
         animationStyle="wave"
       />
-    </View>
+
+      <AutocompleteTextInputX
+        suggestions={suggestions}
+        onSelect={handleSelect}
+        displayMode="dropdown"
+      />
+      <AutocompleteTextInputX
+        suggestions={suggestions}
+        onSelect={handleSelect}
+        displayMode="modal"
+      />
+    </ScrollView>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop:'22%',
+    width:'auto'
   },
 });
