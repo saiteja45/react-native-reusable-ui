@@ -1,5 +1,9 @@
-import { Text, View, StyleSheet, Alert, ScrollView } from 'react-native';
-import { CustomButtonX, SkeletonLoaderX, AutocompleteTextInputX } from 'react-native-reusable-ui';
+import { Text, StyleSheet, Alert, ScrollView } from 'react-native';
+import {
+  CustomButtonX,
+  SkeletonLoaderX,
+  AutocompleteTextInputX,
+} from 'react-native-reusable-ui';
 
 export default function App() {
   const suggestions = [
@@ -18,12 +22,12 @@ export default function App() {
     console.log('Selected:', value);
   };
   return (
-
-    <ScrollView style={styles.container}
-    contentContainerStyle={{
-      alignContent:"center",
-      justifyContent:"center"
-    }}
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{
+        alignContent: 'center',
+        justifyContent: 'center',
+      }}
     >
       <CustomButtonX
         title="Click Me"
@@ -52,14 +56,13 @@ export default function App() {
         displayMode="modal"
       />
     </ScrollView>
-
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:'22%',
-    width:'auto'
+    marginTop: '22%',
+    width: 'auto',
   },
 });
